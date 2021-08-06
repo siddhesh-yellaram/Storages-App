@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+</head>
+
+<body>
+    <button onclick="clickCount()" type="button">Click Me!!</button>
+    <div id="btnClick"></div>
+    <script>
+        function clickCount() {
+            if (SessionStorage.clickcount) {
+                SessionStorage.clickcount = Number(SessionStorage.clickcount) + 1;
+            } else {
+                SessionStorage.clickcount = 1;
+            }
+            document.getElementById("btnClick").innerHTML = "Number Of Mouse Clicks (SessionStorage): " + SessionStorage.clickcount;
+        }
+    </script>
+</body>
+
+</html>
